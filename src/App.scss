@@ -1,38 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100:900&display=swap');
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rebeccapurple;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn {
+  padding: 1rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-weight: bold;
+  color: rebeccapurple;
+  cursor: pointer;
+  &:focus {
+    outline: none;
   }
-  to {
-    transform: rotate(360deg);
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.toasts {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.toast {
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  &.info {
+    color: rebeccapurple;
+  }
+  &.success {
+    color: green;
+  }
+  &.error {
+    color: red;
   }
 }
